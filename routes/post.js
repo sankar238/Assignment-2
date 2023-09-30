@@ -3,7 +3,7 @@ const router = express.Router();
 const Post = require("../models/post");
 const bodyParser= require("body-parser");
 
-router.get("/",async(req,res)=>{
+router.get("/",async(req,res)=>{   
 try{   
     const posts= await Post.find({user:req.user})
     res.status(200).json({

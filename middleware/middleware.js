@@ -1,12 +1,12 @@
 const User = require("../models/user");
 const jwt = require ("jsonwebtoken");
-// const secret = process.env.SECRET;
+
 const secret="RESTAPI";
-// console.log(secret)
+
 const middleware = ( req,res,next)=>{
     if(req.headers.authorization){
         const token = req.headers.authorization.split("test ")[1];
-        // console.log(token)
+      
         jwt.verify(token,secret,async(err,decoded)=>{
             // try{
                 if(err){

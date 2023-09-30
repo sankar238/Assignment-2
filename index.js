@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const bodyParser = require ("body-parser");
 const cors = require ("cors");
 const middleware= require("./middleware/middleware")
-const app=express();
+const app=express();  
 dotenv.config()
 app.use(cors());
 const userRoutes = require ("./routes/user");
