@@ -7,5 +7,5 @@ const PostSchema = new mongoose.Schema ({
     user :{ type:mongoose.Schema.Types.ObjectId ,ref:"User"}
 
 })
-const Post = mongoose.model("post", PostSchema);
+const Post = mongoose.model("post", PostSchema); 
 module.exports = Post
